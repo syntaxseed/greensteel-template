@@ -1,9 +1,9 @@
 <?php
 /**
- * DokuWiki Default Template 2012
+ * DokuWiki GreenSteel Template
  *
  * @link     http://dokuwiki.org/template
- * @author   Anika Henke <anika@selfthinker.org>
+ * @author   Sherri Wheeler. Original base template: Anika Henke <anika@selfthinker.org>
  * @author   Clarence Lee <clarencedglee@gmail.com>
  * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
  */
