@@ -2,9 +2,8 @@
 /**
  * DokuWiki GreenSteel Template
  *
- * @link     http://dokuwiki.org/template
+ * @link     https://www.dokuwiki.org/template:greensteel
  * @author   Sherri Wheeler. Original base template: Anika Henke <anika@selfthinker.org>
- * @author   Clarence Lee <clarencedglee@gmail.com>
  * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
  */
 

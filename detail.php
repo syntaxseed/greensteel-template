@@ -71,7 +71,7 @@ if (!defined('DOKU_INC')) die();
                                         if (!empty($tag[0])) {
                                             $t = array($tag[0]);
                                         }
-                                        if(is_array($tag[3])) {
+                                        if(array_key_exists(3, $tag) && is_array($tag[3])) {
                                             $t = array_merge($t,$tag[3]);
                                         }
                                         $value = tpl_img_getTag($t);
@@ -114,11 +114,11 @@ if (!defined('DOKU_INC')) die();
                                 $authNS = auth_quickaclcheck("$imgNS:*");
                                 if (($authNS >= AUTH_UPLOAD) && function_exists('media_managerURL')) {
                                     $mmURL = media_managerURL(array('ns' => $imgNS, 'image' => $IMG));
-                                    echo '<li><a href="'.$mmURL.'" class="mediaManager"><span>'.$lang['img_manager'].'</span></a></li>';
+                                    echo '<li><a href="'.$mmURL.'" class="mediaManager"><span>'.$lang['btn_media'].'</span></a></li>';
                                 }
                             ?>
                             <?php // Back to [ID]; @todo: transfer logic to backend
-                                echo '<li><a href="'.wl($ID).'" class="back"><span>'.$lang['img_backto'].' '.$ID.'</span></a></li>';
+                                echo '<li><a href="'.wl($ID).'" class="back"><span>'.$lang['btn_img_backto'].' '.$ID.'</span></a></li>';
                             ?>
                         </ul>
                     </div>
