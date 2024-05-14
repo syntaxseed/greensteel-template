@@ -192,9 +192,13 @@ body {
 #dokuwiki__sitetools ul,
 #dokuwiki__sitetools h3,
 #dokuwiki__pagetools,
-.dokuwiki div.breadcrumbs, /* @todo: maybe move breadcrumbs to the bottom? */
 .dokuwiki .pageId {
     display: none;
+}
+
+.dokuwiki div.breadcrumbs { /* @todo: maybe move breadcrumbs to the bottom? */
+    /* display: none; */
+    margin-bottom:20px;
 }
 
 /* search form */
