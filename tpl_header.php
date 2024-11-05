@@ -46,10 +46,16 @@ if (!defined('DOKU_INC')) die();
                             tpl_userinfo(); /* 'Logged in as ...' */
                             echo '</li>';
                         }
-                        tpl_action('admin', 1, 'li');
-                        tpl_action('profile', 1, 'li');
-                        tpl_action('register', 1, 'li');
-                        tpl_action('login', 1, 'li');
+                  
+                  		$items = (new \dokuwiki\Menu\UserMenu())->getItems();
+                        foreach($items as $item) {
+                            echo '<li>'
+                                .'<a href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                .'<span class="icon">'.inlineSVG($item->getSvg()).'</span>'
+                                . '<span class="a11y">'.$item->getLabel().'</span>'
+                                . '</a></li>';
+                        }                  
+                        
                     ?>
                 </ul>
             </div>
@@ -60,13 +66,26 @@ if (!defined('DOKU_INC')) die();
             <h3 class="a11y"><?php echo $lang['site_tools']; ?></h3>
             <?php tpl_searchform(); ?>
             <div class="mobileTools">
-                <?php tpl_actiondropdown($lang['tools']); ?>
+              
+              <?php 
+              //tpl_actiondropdown($lang['tools']); 
+              echo (new \dokuwiki\Menu\MobileMenu())->getDropdown($lang['tools']);
+              ?>
             </div>
             <ul>
                 <?php
-                    tpl_action('recent', 1, 'li');
-                    tpl_action('media', 1, 'li');
-                    tpl_action('index', 1, 'li');
+              		// Show Site Menu
+                    $items = (new \dokuwiki\Menu\SiteMenu())->getItems();
+                    foreach($items as $item) {
+                        echo '<li>'
+                            . '<a href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                            . '<span class="icon">'.inlineSVG($item->getSvg()).' '.$item->getLabel().'</span>'
+                            . '</a></li>';
+                    }
+              
+                    //tpl_action('recent', 1, 'li');
+                    //tpl_action('media', 1, 'li');
+                    //tpl_action('index', 1, 'li');
                 ?>
             </ul>
         </div>

@@ -74,12 +74,16 @@ $showSidebar = $hasSidebar && ($ACT=='show');
                 <div class="tools">
                     <ul>
                         <?php
-                            tpl_action('edit',      1, 'li', 0, '<span>', '</span>');
-                            tpl_action('revert',    1, 'li', 0, '<span>', '</span>');
-                            tpl_action('revisions', 1, 'li', 0, '<span>', '</span>');
-                            tpl_action('backlink',  1, 'li', 0, '<span>', '</span>');
-                            tpl_action('subscribe', 1, 'li', 0, '<span>', '</span>');
-                            tpl_action('top',       1, 'li', 0, '<span>', '</span>');
+                            // Show Page Menu
+                            $items = (new \dokuwiki\Menu\PageMenu())->getItems();
+                            foreach($items as $item) {
+                                echo '<li>'
+                                    . '<a href="'.$item->getLink().'" title="'.$item->getTitle().'">'
+                                    . inlineSVG($item->getSvg())
+                                    . '<span>'.$item->getLabel().'</span>'
+                                    . '</a></li>';
+                            }
+
                         ?>
                     </ul>
                 </div>

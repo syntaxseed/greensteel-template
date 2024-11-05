@@ -1,7 +1,7 @@
 base     greensteel
 author   Sherri Wheeler
 email    Contact at https://syntaxseed.com
-date     2024-05-14
+date     2024-11-05
 name     GreenSteel
 desc     A green background template based on the default.
 url      https://github.com/syntaxseed/greensteel-template

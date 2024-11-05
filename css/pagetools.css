@@ -71,16 +71,22 @@
     display: block;
     min-height: 20px; /* 30 - 2x5 */
     line-height: 20px;
-    padding: 5px 40px 5px 5px;
-    background-image: url(images/pagetools-sprite.png);
+    padding: 5px 8px 5px 5px;
+    /*background-image: url(images/pagetools-sprite.png);
     background-position: right 0;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
     /* add transparent border to prevent jumping when proper border is added on focus */
     border: 1px solid transparent;
     white-space: nowrap;
 }
+#dokuwiki__pagetools ul li a svg {
+    fill: #ccc;
+    width: 20px;
+    height: 20px;
+}
+
 [dir=rtl] #dokuwiki__pagetools ul li a {
-    padding: 5px 5px 5px 40px;
+    padding: 5px 5px 5px 8px;
     background-position: left 0;
 }
 

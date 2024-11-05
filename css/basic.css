@@ -81,6 +81,13 @@ h6 {
 /* bottom margin = 1 / font-size */
 
 
+/*____________ Greensteel common styles ____________*/
+
+.icon svg{
+    fill: #ccc;
+}
+
+
 /*____________ basic margins and paddings ____________*/
 
 p,
